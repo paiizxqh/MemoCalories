@@ -76,7 +76,7 @@ public class MainScript extends StageObject implements ScriptDoAble {
 			s5.color = Color.RED;
 			Handlers.addSprite(s5);
 			
-			/*
+			
 			palai.ticking = false;
 			palai.rendering = false;
 			
@@ -93,7 +93,7 @@ public class MainScript extends StageObject implements ScriptDoAble {
 			s4.rendering = false;
 			s5.ticking = false;
 			s5.rendering = false;
-			*/	
+				
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
