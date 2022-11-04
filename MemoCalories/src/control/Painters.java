@@ -57,7 +57,6 @@ public class Painters extends Canvas implements Runnable {
 		int frames = 0;
 		long lastTime = System.nanoTime();
 		double tickDelay = 0;
-		double renderDelay = 0;
 		long timer = System.currentTimeMillis();
 		long now;
 		frames = 0;
@@ -70,14 +69,9 @@ public class Painters extends Canvas implements Runnable {
 				} catch (Exception e) {
 					;
 				}
-				
 				tickDelay -= 1;
 			}
-			renderDelay += (now - lastTime) / NANO_SECOND;
-			if (renderDelay >= 5) {
-				render();
-				renderDelay -= 5;
-			}
+			render();
 			lastTime = now;
 			frames++;
 			if (System.currentTimeMillis() - timer > 1000) {
